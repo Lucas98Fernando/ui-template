@@ -38,6 +38,8 @@ img {
   display: grid;
   grid-template-columns: repeat(2, 1fr);
   overflow-x: hidden;
+  height: 80vh;
+  width: 80vw;
   border-radius: 15px;
   box-shadow: 2px 2px 15px 2px rgba(0, 0, 0, 0.2);
 }
@@ -46,8 +48,6 @@ img {
   display: flex;
   justify-content: center;
   align-items: center;
-  height: 80vh;
-  width: 80vh;
   background-color: #fff;
 }
 
@@ -261,11 +261,48 @@ form a:hover {
   color: #fff;
 }
 
+/* Keyframes */
+
 @keyframes zoom {
   from {
     width: 50%;
   }
   to {
     width: 100%;
+  }
+}
+
+
+/* Media querys */
+@media (max-width: 768px) {
+  .img-container {
+    display: none;
+  }
+
+  .content {
+    grid-template-columns: repeat(1, 1fr);
+  }
+
+  .login-container {
+    border-radius: 15px;
+  }
+
+  form {
+    padding: 1rem;
+  }
+}
+
+@media (max-width: 1024px) {
+  .content {
+    width: 90vw;
+    height: 90vh;
+  }
+
+  .img-container {
+    width: 50vw;
+  }
+
+  .content {
+    margin: 0 1rem;
   }
 }
