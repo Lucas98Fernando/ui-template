@@ -138,12 +138,12 @@ form p {
   transition: 0.3s;
 }
 
-.input-div > div {
+.input-div>div {
   position: relative;
   height: 40px;
 }
 
-.input-div > div h5 {
+.input-div>div h5 {
   position: absolute;
   left: 10px;
   top: 50%;
@@ -206,6 +206,7 @@ form a:hover {
   align-items: center;
   align-content: center;
   justify-content: space-between;
+  flex-wrap: wrap;
   padding: 0 0 1rem;
 }
 
@@ -267,6 +268,7 @@ form a:hover {
   from {
     width: 50%;
   }
+
   to {
     width: 100%;
   }
@@ -274,6 +276,18 @@ form a:hover {
 
 
 /* Media querys */
+
+@media (max-width: 1024px) {
+  .content {
+    width: 90vw;
+    height: 90vh;
+  }
+
+  .content {
+    margin: 0 1rem;
+  }
+}
+
 @media (max-width: 768px) {
   .img-container {
     display: none;
@@ -292,17 +306,12 @@ form a:hover {
   }
 }
 
-@media (max-width: 1024px) {
-  .content {
-    width: 90vw;
-    height: 90vh;
+@media (max-width: 600px) {
+  form {
+    width: 320px;
   }
 
-  .img-container {
-    width: 50vw;
-  }
-
-  .content {
-    margin: 0 1rem;
+  .forgot {
+    justify-content: center;
   }
 }
