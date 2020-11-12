@@ -41,6 +41,7 @@ img {
   height: 80vh;
   width: 80vw;
   border-radius: 15px;
+  overflow-y: hidden;
   box-shadow: 2px 2px 15px 2px rgba(0, 0, 0, 0.2);
 }
 
@@ -66,13 +67,13 @@ form {
 
 form h1 {
   color: #fff;
-  font-size: 3.2rem;
+  font-size: 3rem;
   text-align: center;
 }
 
 form p {
   color: #fff;
-  font-size: 1.3rem;
+  font-size: 1.2rem;
   text-align: center;
   font-weight: 400;
 }
