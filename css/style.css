@@ -39,6 +39,7 @@ img {
   justify-content: center;
   align-items: center;
   align-content: center;
+  overflow-y: auto;
 }
 
 .content {
@@ -48,7 +49,6 @@ img {
   height: 90vh;
   width: 90vw;
   border-radius: 15px;
-  overflow-y: auto;
   box-shadow: 2px 2px 15px 2px rgba(0, 0, 0, 0.2);
 }
 
@@ -344,11 +344,16 @@ form a:hover {
 
 @media (max-width: 1024px) {
   .content {
-    margin: 0 1rem;
+    margin: 0;
   }
 }
 
 @media (max-width: 768px) {
+  .content {
+    width: 90%;
+    height: 95%;
+  }
+
   .img-container {
     display: none;
   }
@@ -362,7 +367,7 @@ form a:hover {
   }
 
   .content {
-    grid-template-columns: repeat(1, 1fr);
+    grid-template-columns: 1fr;
   }
 
   .login-container {
