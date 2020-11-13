@@ -27,7 +27,14 @@ img {
 .main-container {
   width: 100%;
   height: 100vh;
-  background-color: #1098f7;
+  background: linear-gradient(
+      to bottom,
+      rgba(16, 152, 247, 0.7) 0%,
+      rgba(16, 152, 247, 0.7) 100%
+    ),
+    url("../img/bg-shape.jpg");
+  background-position: center;
+  background-size: cover;
   display: flex;
   justify-content: center;
   align-items: center;
@@ -38,10 +45,10 @@ img {
   display: grid;
   grid-template-columns: repeat(2, 1fr);
   overflow-x: hidden;
-  height: 80vh;
-  width: 80vw;
+  height: 90vh;
+  width: 90vw;
   border-radius: 15px;
-  overflow-y: hidden;
+  overflow-y: auto;
   box-shadow: 2px 2px 15px 2px rgba(0, 0, 0, 0.2);
 }
 
@@ -49,7 +56,7 @@ img {
   display: flex;
   justify-content: center;
   align-items: center;
-  background: linear-gradient(to bottom, rgba(255, 255, 255, 0.6) 0%, rgba(255, 255, 255, 0.6) 100%), url('../img/bg-shape.jpg');
+  background-color: #fff;
   background-position: left;
   background-size: cover;
 }
@@ -63,19 +70,18 @@ img {
 }
 
 form {
-  width: 400px;
-  padding: 0 1rem;
+  width: 70%;
 }
 
 form h1 {
   color: #fff;
-  font-size: 3rem;
+  font-size: 2.3rem;
   text-align: center;
 }
 
 form p {
   color: #fff;
-  font-size: 1.2rem;
+  font-size: 1rem;
   text-align: center;
   font-weight: 400;
 }
@@ -141,12 +147,12 @@ form p {
   transition: 0.3s;
 }
 
-.input-div>div {
+.input-div > div {
   position: relative;
   height: 40px;
 }
 
-.input-div>div h5 {
+.input-div > div h5 {
   position: absolute;
   left: 10px;
   top: 50%;
@@ -261,6 +267,19 @@ form a:hover {
   color: #fff;
 }
 
+.terms {
+  display: inline-flex;
+  align-items: center;
+  justify-content: space-between;
+  flex-wrap: wrap;
+  padding: 0 0 0.8rem;
+}
+
+.terms label {
+  padding-right: 5px;
+  color: #fff;
+}
+
 .others {
   display: flex;
   align-items: center;
@@ -286,7 +305,7 @@ form a:hover {
 }
 
 .social img {
-  margin: 1rem 0.5rem;
+  margin: 1rem;
   width: 32px;
   vertical-align: middle;
   cursor: pointer;
@@ -321,15 +340,9 @@ form a:hover {
   }
 }
 
-
 /* Media queries */
 
 @media (max-width: 1024px) {
-  .content {
-    width: 90vw;
-    height: 90vh;
-  }
-
   .content {
     margin: 0 1rem;
   }
@@ -340,6 +353,14 @@ form a:hover {
     display: none;
   }
 
+  form {
+    width: 80%;
+  }
+
+  .login-container {
+    padding: 0.5rem 0;
+  }
+
   .content {
     grid-template-columns: repeat(1, 1fr);
   }
@@ -347,23 +368,11 @@ form a:hover {
   .login-container {
     border-radius: 15px;
   }
-
-  form {
-    padding: 1rem;
-  }
 }
 
 @media (max-width: 600px) {
-  form {
-    width: 320px;
-  }
-
   form h1 {
-    font-size: 2.5rem;
-  }
-
-  form p {
-    font-size: 1rem;
+    font-size: 2rem;
   }
 
   .forgot {
